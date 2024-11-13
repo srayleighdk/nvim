@@ -88,7 +88,16 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {
+          capabilities = capabilities,
+          settings = {
+            python = {
+              formatting = {
+                indentSize = 2, -- Set Pyright to use 2 spaces for indentation
+              },
+            },
+          },
+        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -98,6 +107,7 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        marksman = {},
 
         markdownlint = {},
         lua_ls = {
@@ -183,8 +193,8 @@ return {
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          map('<leader>ws', vim.lsp.buf.workspace_symbol, '[W]orkspace [S]ymbols')
-
+          -- map('<leader>ws', vim.lsp.buf.workspace_symbol, '[W]orkspace [S]ymbols')
+          --
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
           map('<leader>cr', vim.lsp.buf.rename, '[R]e[n]ame')

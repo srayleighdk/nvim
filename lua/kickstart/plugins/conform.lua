@@ -34,6 +34,7 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         dart = { 'dartls' },
+        python = { 'autopep8', extra_args = { '--indent-size', '2' } },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

@@ -62,4 +62,16 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = 'utf-8'
+
+vim.opt.smarttab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.expandtab = true
+vim.g.python_recommend_style = 0
+
 -- vim: ts=2 sts=2 sw=2 et
