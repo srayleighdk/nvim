@@ -35,6 +35,7 @@ return {
         lua = { 'stylua' },
         dart = { 'dartls' },
         python = { 'autopep8', extra_args = { '--indent-size', '2' } },
+        html = { 'prettierd' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

@@ -35,36 +35,23 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
-      {
-        'tzachar/cmp-tabnine',
-        build = './install.sh',
-        config = function()
-          local tabnine = require 'cmp_tabnine.config'
-
-          tabnine:setup {
-            max_lines = 1000,
-            max_num_results = 20,
-            sort = true,
-            run_on_every_keystroke = true,
-            snippet_placeholder = '..',
-            ignored_file_types = {
-              -- default is not to ignore
-              -- uncomment to ignore in lua:
-              -- lua = true
-            },
-            show_prediction_strength = false,
-            min_percent = 0,
-          }
-        end,
-      },
     },
     config = function()
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
+      local lspkind = require 'lspkind'
       luasnip.config.setup {}
 
       cmp.setup {
+        view = {
+          entries = {
+            name = 'custom',
+            selection_order = 'near_cursor',
+            vertical_positioning = 'above',
+            follow_cursor = true,
+          },
+        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -133,12 +120,20 @@ return {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
-          { name = 'cmp_tabnine' },
+          { name = 'codeium' },
         },
 
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
+        },
+        formatting = {
+          format = lspkind.cmp_format {
+            mode = 'symbol',
+            maxwidth = 50,
+            ellipsis_char = '...',
+            symbol_map = { Codeium = '' },
+          },
         },
       }
     end,

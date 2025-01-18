@@ -53,6 +53,7 @@ vim.keymap.set('n', '<leader>fr', '<cmd>FlutterRun<CR>', { desc = '[F]lutter [R]
 vim.keymap.set('n', '<leader>fs', '<cmd>FlutterReload<CR>', { desc = '[F]lutter Reload' })
 vim.keymap.set('n', '<leader>fd', '<cmd>FlutterRestart<CR>', { desc = '[F]lutter Restart' })
 vim.keymap.set('n', '<leader>fq', '<cmd>FlutterQuit<CR>', { desc = '[F]lutter Quit' })
+vim.keymap.set('n', '<leader>fc', '<cmd>FlutterLogClear<CR>', { desc = '[F]lutter [C]lear Log' })
 
 vim.keymap.set('n', '<leader>rr', '<cmd>Rest run<CR>', { desc = '[R]est run' })
 vim.keymap.set('n', '<leader>rl', '<cmd>Rest logs<CR>', { desc = '[R]est logs' })
