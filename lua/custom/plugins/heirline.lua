@@ -22,8 +22,8 @@ return {
 
     local function setup_colors()
       return {
-        bright_bg = '#F4E0D0',
-        bright_fg = '#4E4B56',
+        bright_bg = '#000000',
+        bright_fg = '#ffffff',
         red = utils.get_highlight('DiagnosticError').fg,
         dark_red = utils.get_highlight('DiffDelete').bg,
         green = utils.get_highlight('String').fg,
@@ -36,15 +36,15 @@ return {
         diag_error = utils.get_highlight('DiagnosticError').fg,
         diag_hint = utils.get_highlight('DiagnosticHint').fg,
         diag_info = utils.get_highlight('DiagnosticInfo').fg,
-        git_del = '#E07A5F',
+        git_del = '#449dab',
         git_add = utils.get_highlight('diffAdded').fg,
         git_change = utils.get_highlight('diffChanged').fg,
       }
     end
 
     local colors = {
-      bright_bg = '#F4E0D0',
-      bright_fg = '#4E4B56',
+      bright_bg = '#000000',
+      bright_fg = '#ffffff',
       red = utils.get_highlight('DiagnosticError').fg,
       dark_red = utils.get_highlight('DiffDelete').bg,
       green = utils.get_highlight('String').fg,
@@ -57,7 +57,7 @@ return {
       diag_error = utils.get_highlight('DiagnosticError').fg,
       diag_hint = utils.get_highlight('DiagnosticHint').fg,
       diag_info = utils.get_highlight('DiagnosticInfo').fg,
-      git_del = '#E07A5F',
+      git_del = '#449dab',
       git_add = utils.get_highlight('diffAdded').fg,
       git_change = utils.get_highlight('diffChanged').fg,
     }
@@ -777,7 +777,6 @@ return {
     -- See lsp-status/README.md for configuration options.
 
     -- Note: check "j-hui/fidget.nvim" for a nice statusline-free alternative.
-
     require('heirline').load_colors(colors)
     require('heirline').setup { statusline = StatusLines }
     -- we're done.

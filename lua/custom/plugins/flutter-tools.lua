@@ -1,3 +1,8 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}
 return {
   {
     'nvim-flutter/flutter-tools.nvim',
@@ -10,7 +15,7 @@ return {
     config = function()
       require('flutter-tools').setup {
         lsp = {
-          capabilities = require('cmp_nvim_lsp').default_capabilities(),
+          capabilities = capabilities,
         },
       }
     end,

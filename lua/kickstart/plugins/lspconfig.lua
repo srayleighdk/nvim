@@ -105,9 +105,13 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
+        ts_ls = {},
         --
         marksman = {},
+        docker_compose_language_service = {
+          filetypes = { 'compose.yaml', 'yaml' },
+        },
+        dockerls = {},
 
         markdownlint = {},
         lua_ls = {

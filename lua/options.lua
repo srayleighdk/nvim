@@ -51,7 +51,6 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -73,5 +72,11 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.expandtab = true
 vim.g.python_recommend_style = 0
+
+-- Fold
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 -- vim: ts=2 sts=2 sw=2 et
