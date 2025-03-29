@@ -121,6 +121,7 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'codeium' },
+          { name = 'supermaven' },
         },
 
         window = {
@@ -132,11 +133,12 @@ return {
             mode = 'symbol',
             maxwidth = 50,
             ellipsis_char = '...',
-            symbol_map = { Codeium = '' },
+            symbol_map = { Codeium = '', Supermaven = '' },
           },
         },
       }
     end,
+    vim.api.nvim_set_hl(0, 'CmpItemKindSupermaven', { fg = '#6CC644' }),
   },
 }
 -- vim: ts=2 sts=2 sw=2 et

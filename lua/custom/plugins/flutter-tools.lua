@@ -14,6 +14,7 @@ return {
     opts = {},
     config = function()
       require('flutter-tools').setup {
+        flutter_path = '/home/kali/Downloads/build/flutter/bin/flutter',
         lsp = {
           capabilities = capabilities,
         },
